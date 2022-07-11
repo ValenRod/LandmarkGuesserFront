@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "types": [
+        "../landmark-guesser-back/types"
+      ]
+    }
+  }
+}
