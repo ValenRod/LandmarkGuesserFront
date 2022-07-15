@@ -1,0 +1,13 @@
+button, .btn{
+    border: 0;
+    background-color: #217631;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 3px 70px;
+    border-radius: 5px;
+    line-height: 1.5rem;
+    text-decoration: none;
+    margin: 0 auto;
+}
