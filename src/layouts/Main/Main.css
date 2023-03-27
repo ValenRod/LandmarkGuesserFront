@@ -1,0 +1,7 @@
+main {
+    height: 93%;
+}
+
+main > div {
+    height: 100%;
+}
