@@ -2,7 +2,7 @@ header {
     display: flex;
     background-color: rgba(24, 24, 24, 0.8);
     min-height: 50px;
-    height: 7%;
+    max-height: 80px;
     width: 100%;
     justify-content: flex-start;
     align-items: center;

@@ -1,5 +1,7 @@
 .App {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(176deg, rgba(9, 6, 18, 1) 0%, rgba(23, 31, 51, 1) 50%, rgba(28, 77, 59, 1) 100%);
 }
 
