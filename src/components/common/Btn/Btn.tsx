@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {ReactElement} from 'react';
 import './Btn.css';
 
 interface Props {
-  content: string;
+  content: string | ReactElement;
   action: () => void;
   className?: string;
   id?: string;
