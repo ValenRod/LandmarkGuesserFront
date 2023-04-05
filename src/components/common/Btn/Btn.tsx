@@ -6,12 +6,15 @@ interface Props {
   action: () => void;
   className?: string;
   id?: string;
+  disabled?: boolean;
 }
 
 export const Btn = (props: Props) => {
+  const {content, action, className, id, disabled} = props;
+
   return (
-    <button className={props.className} id={props.id} onClick={props.action}>
-      {props.content}
+    <button className={className} id={id} onClick={action} disabled={disabled}>
+      {content}
     </button>
   );
 };

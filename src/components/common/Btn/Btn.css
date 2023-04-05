@@ -1,10 +1,9 @@
 button {
-    margin: 0 auto;
-    padding: 13px 70px;
+    padding: 11px 70px;
     border-radius: 25px;
     border: 0;
     font-size: 1.5rem;
-    line-height: 1.25rem;
+    line-height: 1.5rem;
     background: linear-gradient(45deg, rgb(42, 141, 76) 0%, rgb(54, 180, 97) 100%);
     font-style: italic;
     text-transform: uppercase;
