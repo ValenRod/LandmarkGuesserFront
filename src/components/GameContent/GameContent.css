@@ -1,0 +1,6 @@
+.game-content {
+    height: 100%;
+}
+ .game-content > div {
+     height: 100%;
+ }
