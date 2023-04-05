@@ -51,6 +51,6 @@
     z-index: 2;
 }
 
-#send-btn.disabled {
-    opacity: .85;
+#send-btn:disabled {
+    opacity: .75;
 }
