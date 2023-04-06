@@ -1,23 +1,17 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import './Landmark.css';
-import {getLandmark} from '../../utils/getLandmark';
 import {useGameContext} from '../../hooks/useGameContext';
 import {useFetchErrorContext} from '../../hooks/useFetchErrorContext';
+import {useLandmarkImgSrc} from '../../hooks/useLandmarkImgSrc';
 
 export const Landmark = () => {
-  const [landmarkImgSrc, setLandmarkImgSrc] = useState<string | null>(null);
-  const {setFetchErrorState} = useFetchErrorContext();
   const {gameParams} = useGameContext();
-  const {url} = gameParams.rounds[gameParams.currentRound - 1].landmark;
-
-  useEffect(() => {
-    (async () => {
-      await getLandmark({
-        url,
-        setLandmarkImgSrc,
-        setFetchErrorState,
-      });
-    })();
+  const {rounds} = gameParams;
+  const {url} = rounds[rounds.length - 1].landmark;
+  const {setFetchErrorState} = useFetchErrorContext();
+  const {landmarkImgSrc} = useLandmarkImgSrc({
+    url,
+    setFetchErrorState,
   });
 
   return (
