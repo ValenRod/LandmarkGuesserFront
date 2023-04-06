@@ -1,11 +1,6 @@
-import React, {
-  createContext,
-  ReactNode,
-  useState,
-  Dispatch,
-  SetStateAction,
-} from 'react';
+import React, {createContext, ReactNode, Dispatch, SetStateAction} from 'react';
 import {GameParams, Coordinates} from 'types';
+import {useGuessedMarkerPosition} from '../hooks/useGuessedMarkerPosition';
 
 interface GameContextInterface {
   gameParams: GameParams;
@@ -25,8 +20,8 @@ interface Props
 export const GameContext = createContext<GameContextInterface | null>(null);
 
 export const GameProvider = (props: Props) => {
-  const [guessedMarkerPosition, setGuessedMarkerPosition] =
-    useState<Coordinates | null>(null);
+  const {guessedMarkerPosition, setGuessedMarkerPosition} =
+    useGuessedMarkerPosition();
   const {gameParams, setLoadGame, children} = props;
 
   return (

@@ -1,27 +1,21 @@
-import React, {useEffect, useState} from 'react';
-import {GameParams} from 'types';
+import React from 'react';
 import {GameContent} from '../../components/GameContent/GameContent';
-import {getGameParams} from '../../utils/getGameParams';
 import {useParams} from 'react-router-dom';
 import {useFetchErrorContext} from '../../hooks/useFetchErrorContext';
 import {GameProvider} from '../../contexts/GameContext';
+import {useGameParams} from '../../hooks/useGameParams';
+import {useLoadGame} from '../../hooks/useLoadGame';
 
 export const Game = () => {
-  const [gameParams, setGameParams] = useState<GameParams | null>(null);
-  const [loadGame, setLoadGame] = useState<boolean>(true);
-  const {setFetchErrorState} = useFetchErrorContext();
   const gameId = useParams().id ?? '';
-
-  useEffect(() => {
-    (async () => {
-      await getGameParams({
-        gameId,
-        setGameParams,
-        setLoadGame,
-        setFetchErrorState,
-      });
-    })();
-  }, [loadGame]);
+  const {loadGame, setLoadGame} = useLoadGame();
+  const {setFetchErrorState} = useFetchErrorContext();
+  const {gameParams} = useGameParams({
+    gameId,
+    loadGame,
+    setLoadGame,
+    setFetchErrorState,
+  });
 
   return gameParams ? (
     <div className="game">
