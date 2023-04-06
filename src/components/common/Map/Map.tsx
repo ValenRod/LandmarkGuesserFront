@@ -3,13 +3,22 @@ import 'leaflet/dist/leaflet.css';
 import './Map.css';
 import {MapContainer, TileLayer} from 'react-leaflet';
 import {GuessedMarker} from '../../GuessedMarker/GuessedMarker';
+import {
+  MarkersContainer,
+  MarkersDataObj,
+} from '../../MarkersContainer/MarkersContainer';
 
-export const Map = () => {
+interface Props {
+  markersData?: MarkersDataObj[] | null;
+}
+
+export const Map = (props: Props) => {
+  const {markersData} = props;
+  const defaultZoom = 1;
   const defaultCenter = {
     lat: 0,
     lng: 0,
   };
-  const defaultZoom = 1;
 
   return (
     <div className="map">
@@ -18,7 +27,13 @@ export const Map = () => {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <GuessedMarker />
+        {!markersData ? (
+          <GuessedMarker />
+        ) : (
+          markersData.map((markers, index) => (
+            <MarkersContainer markers={markers} key={index} />
+          ))
+        )}
       </MapContainer>
     </div>
   );
