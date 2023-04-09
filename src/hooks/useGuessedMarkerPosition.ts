@@ -38,6 +38,7 @@ export const useGuessedMarkerPosition = (props: Props) => {
             throw new Error(res.statusText);
           }
           setGuessedMarkerPosition(null);
+          setSendGuessedMarkerPosition(false);
           setLoadGame(true);
         } catch (e) {
           console.error(e);
