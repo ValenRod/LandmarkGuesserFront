@@ -1,0 +1,37 @@
+.points-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.points-bar p {
+    text-align: center;
+    color: #efc52d;
+    font-size: 1.4rem;
+    margin-bottom: .2rem;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.bg-bar {
+    position: relative;
+    height: .6rem;
+    width: 40rem;
+    max-width: 80%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-top: .5rem;
+}
+
+.color-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #efc52d;
+    border-radius: 10px;
+    transition: .5s;
+}
