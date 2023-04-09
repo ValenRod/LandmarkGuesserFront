@@ -1,0 +1,27 @@
+.game-results {
+    width: 100%;
+    margin: .5rem 0;
+    overflow-y: auto;
+}
+
+.game-results > .game-result {
+    display: flex;
+    justify-content: space-around;
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: .5rem 0;
+    border-top: rgba(255, 255, 255, 0.052) solid 1px;
+    border-bottom: rgba(255, 255, 255, 0.052) solid 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.0001) 0%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.0001) 100%);
+}
+
+.game-results > .game-result > p:nth-child(1) {
+    font-weight: bold;
+}
+
+.game-results > .game-result > p {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 .5rem;
+}

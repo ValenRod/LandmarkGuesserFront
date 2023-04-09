@@ -1,0 +1,56 @@
+.map-bar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 640px;
+    max-height: 50%;
+    width: 100%;
+    max-width: 680px;
+    transition: .3s;
+    overflow: visible;
+}
+
+.map-bar.hidden {
+    transform: translateY(100%);
+}
+
+.map-bar > button.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    padding: 1rem;
+    transition: .3s;
+}
+
+#show-map-btn {
+    position: absolute;
+    top: -6rem;
+    right: 2rem;
+}
+
+#show-map-btn.hidden {
+    transform: translateY(200%);
+}
+
+#hide-map-btn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 2;
+    opacity: .85;
+}
+
+#send-btn {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+#send-btn:disabled {
+    opacity: .75;
+}

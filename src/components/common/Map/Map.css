@@ -1,0 +1,12 @@
+.map {
+    height: 100%;
+}
+
+.leaflet-container {
+    height: 100%;
+    z-index: 1;
+}
+
+.leaflet-container * {
+    overflow: visible;
+}
