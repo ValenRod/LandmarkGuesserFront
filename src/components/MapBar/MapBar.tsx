@@ -4,26 +4,11 @@ import {Btn} from '../common/Btn/Btn';
 import {Map} from '../common/Map/Map';
 import {FiMap, FiX} from 'react-icons/fi';
 import {useGameContext} from '../../hooks/useGameContext';
-import {sendGuessedMarkerPosition} from '../../utils/sendGuessedMarkerPosition';
-import {useFetchErrorContext} from '../../hooks/useFetchErrorContext';
-import {useParams} from 'react-router-dom';
 
 export const MapBar = () => {
   const [show, setShow] = useState(false);
-  const {guessedMarkerPosition, setGuessedMarkerPosition, setLoadGame} =
+  const {guessedMarkerPosition, setSendGuessedMarkerPosition} =
     useGameContext();
-  const {setFetchErrorState} = useFetchErrorContext();
-  const gameId = useParams().id ?? '';
-
-  const sendBtnAction = async () => {
-    await sendGuessedMarkerPosition({
-      gameId,
-      guessedMarkerPosition,
-      setGuessedMarkerPosition,
-      setLoadGame,
-      setFetchErrorState,
-    });
-  };
 
   const toggleMap = () => {
     setShow(!show);
@@ -48,7 +33,7 @@ export const MapBar = () => {
         id={'send-btn'}
         content={guessedMarkerPosition ? 'Send' : 'Guess'}
         disabled={!guessedMarkerPosition}
-        action={sendBtnAction}
+        action={() => setSendGuessedMarkerPosition(true)}
       />
     </div>
   );
