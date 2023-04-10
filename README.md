@@ -1,5 +1,5 @@
 # LandmarkGuesser - Frontend
-Project LandmarkGuesser is simple copy of [GeoGuessr](https://www.geoguessr.com/) game. The rules are basicly the same: Players in this case are given landmark image and they goal is to guess it's location on the map. The closer a guess was, more points they get. Game consist 5 rounds.
+Project LandmarkGuesser is a simple copy of [GeoGuessr](https://www.geoguessr.com/) game. The rules are basicly the same: players in this case are given an image of a landamrk and their goal is to guess it's location on the map. The closer a guess was, the more points they get. Game consist 5 of rounds.
 
 
 ## General info
