@@ -1,46 +1,58 @@
-# Getting Started with Create React App
+# LandmarkGuesser - Frontend
+Project LandmarkGuesser is simple copy of [GeoGuessr](https://www.geoguessr.com/) game. The rules are basicly the same: Players in this case are given landmark image and they goal is to guess it's location on the map. The closer a guess was, more points they get. Game consist 5 rounds.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## General info
+Frontend repository for my fullstack application. The views and general idea of this application was inspired by [GeoGuessr](https://www.geoguessr.com/). For frontend I used [TypeScript](https://www.npmjs.com/package/typescript), [React](https://react.dev/), [React Router](https://www.npmjs.com/package/react-router-dom), [React Leaflet](https://www.npmjs.com/package/react-leaflet) with [OpenStreetMap](https://www.openstreetmap.org/), [Pixabay](https://pixabay.com/) for images and also [React Icons](https://www.npmjs.com/package/react-icons) and [SVG Repo](https://www.svgrepo.com/) for icons. Application can be used both mobile and desktop.
 
-In the project directory, you can run:
+## Tech Stack
+  - HTML ![vscode+icons+type+html-1324451320119191066](https://user-images.githubusercontent.com/106924762/230979593-d2fd52a3-0a60-450f-8ecc-2e2c642c67f3.png)
+  - CSS ![vscode+icons+type+css-1324451270074695333](https://user-images.githubusercontent.com/106924762/230979832-429526c1-0f4d-47f1-ac6e-0564fd34e049.png)
+  - TypeScript ![typescript+plain-1324760574122087083](https://user-images.githubusercontent.com/106924762/230974597-96a4e1ea-a06e-43f8-85df-c12ba25fbd74.png)
+  - React ![react-1330289851107454164](https://user-images.githubusercontent.com/106924762/230975204-56fa436c-2cc2-4abb-be52-8adaf98be477.png)
+ 
+## Backend
+Backend repository: https://github.com/ValenRod/LandmarkGuesserBack
 
-### `npm start`
+## Run project locally
+Clone the project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    git clone https://github.com/ValenRod/LandmarkGuesserFront.git
+    
+Go to the project directory
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    cd LandmarkGuesserFront
 
-### `npm test`
+Install dependencies
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    npm install
 
-### `npm run build`
+Start the server
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    react-app-rewired start
+  
+## Desktop Screenshots
+![homePage](https://user-images.githubusercontent.com/106924762/230956642-412e7a56-da00-4162-b3ee-7622f455fcc4.jpg)
+*Home page view*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![notFound](https://user-images.githubusercontent.com/106924762/230991352-573e3594-c1b4-4c36-8cc4-8f7a23e7ff7e.jpg)
+*Not found page view*
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![errorPage](https://user-images.githubusercontent.com/106924762/230991378-d8763611-73de-4423-aaf4-4c20a6124833.jpg)
+*Error page view*
 
-### `npm run eject`
+![round](https://user-images.githubusercontent.com/106924762/230962283-87c32766-14e5-476c-9e05-f2d77870d1bf.jpg)
+*Round view*
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![roundSummary](https://user-images.githubusercontent.com/106924762/230963122-4b17ad03-3367-492a-9d9e-6ade9359c70d.jpg)
+*Round summary view*
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![gameSummary](https://user-images.githubusercontent.com/106924762/230964211-d9bbd424-4992-4b8a-9245-b7863c2fb91d.jpg)
+*Game summary view*
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Mobile Screenshots
+![homeNotFoundErrorMobile](https://user-images.githubusercontent.com/106924762/230991565-4ee34930-4c0a-4149-acf2-6e162d5e6eab.jpg)
+*Home, Not found and Error pages view mobile* 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+ ![roundRoundSummaryGameSummaryMobile](https://user-images.githubusercontent.com/106924762/230991828-babd6c86-fc83-42b3-a1e2-528cfef3c61c.jpg)
+*Round, Round summary and Game summary view mobile*
