@@ -1,5 +1,5 @@
 # LandmarkGuesser - Frontend
-Project LandmarkGuesser is a simple copy of [GeoGuessr](https://www.geoguessr.com/) game. The rules are practically the same: players are given an image of a landmark and their goal is to guess its location on the map. The closer their guess, the more points they score. The game consists of 5 rounds.
+Project LandmarkGuesser is a simple copy of the [GeoGuessr](https://www.geoguessr.com/) game. The rules are practically the same: players are given an image of a landmark and their goal is to guess its location on the map. The closer their guess, the more points they score. The game consists of 5 rounds.
 
 ## General info
 Frontend repository for my fullstack application. The views and general idea of this application was inspired by [GeoGuessr](https://www.geoguessr.com/). For frontend I used [TypeScript](https://www.npmjs.com/package/typescript), [React](https://react.dev/), [React Router](https://www.npmjs.com/package/react-router-dom), [React Leaflet](https://www.npmjs.com/package/react-leaflet) with [OpenStreetMap](https://www.openstreetmap.org/), [Pixabay](https://pixabay.com/) for images and also [React Icons](https://www.npmjs.com/package/react-icons) and [SVG Repo](https://www.svgrepo.com/) for icons. Application can be used both mobile and desktop.
